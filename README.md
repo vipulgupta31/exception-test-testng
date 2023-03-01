@@ -1,6 +1,6 @@
 # Exception Test in TestNG
 
-This is sample repository to understand Exception Test in TestNG through different examples.
+This is sample repository to understand Exception Test in TestNG through different examples. Exception test basically helps to validate the execptionn raised in case an unexpected event occurs in execution.
 
 ## About TestNG
 TestNG is an open-source automation testing framework for JAVA built on the capabilities of JUnit and NUnit. It helps to write testcases in a well-structured, easy-to-maintain way by means of annotations, attributes, and other features.
@@ -35,3 +35,18 @@ Using the expectedExceptions attribute of the @Test annotation, we can write exc
 		int val = Integer.parseInt(str);
 	}
 ```
+
+## About Project
+It is created using Selenium with Java, TestNG and Maven for Web-based automation to handle SSL certificates.
+
+This is the list of tools, being used in this framework:
+1. Apache Maven
+2. Java 8
+3. Selenium Cloud Grid - [LambdaTest](http://www.lambdatest.com?fp_ref=vipul51) Platform
+4. TestNG Framework
+
+## Steps for Local Execution
+1. Import this project in Eclipse/IntelliJ as “Existing Maven Project”
+2. Go to the test file and Run test case for your desired case.
+3. You can see the logs coming up on Console as your execution progresses.
+4. Since we are using RemoteWebDriver and executing on Cloud Grid platform, [LambdaTest](http://www.lambdatest.com?fp_ref=vipul51), you can login to same and view detailed logs on dashboard.
