@@ -12,28 +12,31 @@ Using the expectedExceptions attribute of the @Test annotation, we can write exc
 
 ### Exception Test Examples
 #### For single exception
-```@Test(expectedExceptions = ArithmeticException.class)
-	public void test_single_exception()
-	{
-		int divideByZero = 1/0;
-	}
+```
+@Test(expectedExceptions = NoSuchElementException.class)
+public void test_single_exception()
+{
+	//code which throws NoSuchElementException
+}
 ```
   
 #### For multiple exception
-```@Test(expectedExceptions = {ArithmeticException.class, NullPointerException.class})
-	public void test_multiple_exception()
-	{ 
-		int divideByZero = 1/0;
-	}
+```
+@Test(expectedExceptions = {NoSuchElementException.class, NullPointerException.class})
+public void test_multiple_exception()
+{ 
+	//code which can throw either of 
+	//NoSuchElementException or NullPointerException
+}
 ```
   
 #### For asserting exception message
-```@Test(expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Cannot parse null string")
-	public void test_assert_exception_message()
-	{ 
-		String str = null;
-		int val = Integer.parseInt(str);
-	}
+```
+@Test(expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Cannot parse null string")
+public void test_assert_exception_message()
+{ 
+	//code to throw exception with similar exception message
+}
 ```
 
 ## About Project
